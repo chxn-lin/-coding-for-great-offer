@@ -1,5 +1,7 @@
 package class02;
 
+import a.com.linshunc.class02.ChooseWork;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeMap;
@@ -10,7 +12,7 @@ public class Code01_ChooseWork {
 		public int money;
 		public int hard;
 
-		public Job(int m, int h) {
+		public Job(int h, int m) {
 			money = m;
 			hard = h;
 		}
@@ -23,7 +25,11 @@ public class Code01_ChooseWork {
 		}
 	}
 
-	public static int[] getMoneys(Job[] job, int[] ability) {
+	public static int[] getMoneys(int[] hard, int[] money, int[] ability) {
+		Job[] job = new Job[hard.length];
+		for (int i = 0; i < hard.length; i++) {
+			job[i] = new Job(hard[i], money[i]);
+		}
 		Arrays.sort(job, new JobComparator());
 		// key : 难度   value：报酬
 		TreeMap<Integer, Integer> map = new TreeMap<>();
