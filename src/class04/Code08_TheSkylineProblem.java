@@ -1,11 +1,7 @@
 package class04;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 // 本题测试链接 : https://leetcode.com/problems/the-skyline-problem/
 public class Code08_TheSkylineProblem {
@@ -60,7 +56,7 @@ public class Code08_TheSkylineProblem {
 			}
 		}
 		List<List<Integer>> ans = new ArrayList<>();
-		for (Entry<Integer, Integer> entry : mapXHeight.entrySet()) {
+		for (Map.Entry<Integer, Integer> entry : mapXHeight.entrySet()) {
 			int curX = entry.getKey();
 			int curMaxHeight = entry.getValue();
 			if (ans.isEmpty() || ans.get(ans.size() - 1).get(1) != curMaxHeight) {
@@ -68,6 +64,15 @@ public class Code08_TheSkylineProblem {
 			}
 		}
 		return ans;
+	}
+
+	public static void main(String[] args) {
+		int[][] arr = {
+				{1,4,5},
+				{2,4,3},
+		};
+		List<List<Integer>> skyline = getSkyline(arr);
+		System.out.println(skyline);
 	}
 
 }
