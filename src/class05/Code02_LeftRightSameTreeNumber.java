@@ -74,6 +74,7 @@ public class Code02_LeftRightSameTreeNumber {
 	}
 
 	public static void main(String[] args) {
+
 		int maxLevel = 8;
 		int maxValue = 4;
 		int testTime = 100000;
