@@ -9,9 +9,9 @@ import java.util.List;
 public class Problem_0124_BinaryTreeMaximumPathSum {
 
 	public static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
+		public int val;
+		public TreeNode left;
+		public TreeNode right;
 
 		public TreeNode(int v) {
 			val = v;

@@ -1,5 +1,9 @@
 package class30;
 
+import a.com.linshunc.class30.Prob_0103_BinaryTree;
+
+import java.util.List;
+
 public class Problem_0116_PopulatingNextRightPointersInEachNode {
 
 	// 不要提交这个类
@@ -8,6 +12,13 @@ public class Problem_0116_PopulatingNextRightPointersInEachNode {
 		public Node left;
 		public Node right;
 		public Node next;
+
+		public Node(int val) {
+			this.val = val;
+		}
+
+		public Node() {
+		}
 	}
 
 	// 提交下面的代码
@@ -72,6 +83,31 @@ public class Problem_0116_PopulatingNextRightPointersInEachNode {
 			return ans;
 		}
 
+	}
+
+	public static void main(String[] args) {
+		Node node1 = new Node(1);
+		Node node2 = new Node(2);
+		Node node3 = new Node(3);
+		Node node4 = new Node(4);
+		Node node5 = new Node(5);
+		Node node6 = new Node(6);
+		Node node7 = new Node(7);
+		Node node9 = new Node(9);
+
+		node1.left = node2;
+		node1.right = node3;
+
+		node2.left = node4;
+		node2.right = node5;
+
+		node3.left = node6;
+		node3.right = node7;
+
+		node5.right = node9;
+
+		Node connect = connect(node1);
+		System.out.println(connect);
 	}
 
 }
