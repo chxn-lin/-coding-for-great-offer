@@ -3,8 +3,8 @@ package class31;
 public class Problem_0148_SortList {
 
 	public static class ListNode {
-		int val;
-		ListNode next;
+		public int val;
+		public ListNode next;
 
 		public ListNode(int v) {
 			val = v;
